@@ -36,14 +36,14 @@ Before you start using OCI Vision, your tenancy administrator should set up the 
     Log into OCI Cloud Console. Using the Burger Menu on the top left corner, navigate to Identity & Security and click it, and then select Policies item under Identity.
 
 
-    ![](images/policy1.png " ")
+    ![Navigate to Policies](images/navigate-to-policies.png " ")
 
 
 2. Create Policy
 
    Click Create Policy 
 
-   ![](images/policy2.png " ")
+   ![Create a Policy](images/create-policy.png " ")
 
 3. Create a new policy with the following statements:
 
