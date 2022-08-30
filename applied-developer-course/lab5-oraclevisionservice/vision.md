@@ -55,7 +55,7 @@ Before you start using OCI Vision, your tenancy administrator should set up the 
     </copy>
     ```
 
-    ![](images/policy3.png " ")
+    ![Create a new policy with the following statements](images/create-a-new-policy-with-statements.png " ")
 
     If you want to limit access to a user group, create a new policy with the below statement:
 
