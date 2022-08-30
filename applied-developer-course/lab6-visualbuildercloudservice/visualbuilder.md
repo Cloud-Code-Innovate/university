@@ -172,89 +172,89 @@ In this task we will now actually create mobile application that end users can i
 ### Page 1: main-start
 
 1. Click on **Mobile Applications** in left panel and then click on **plus sign**.
-   ![](images/task3/20.png " ")
+   ![](images/task3/vbcs-create-mobile-app.png " ")
 
 2. Give name to application, select **none** as Navigation Style and click **Next**.
-   ![](images/task3/21.png " ")
+   ![](images/task3/mobile-app-name.png " ")
 
 3. Click **Custom** as template and click **Create**.
-   ![](images/task3/22.png " ")
+   ![](images/task3/mobile-app-template.png " ")
 
 4. Once page is loaded you can see the structure in left panel, by default main-start is landing page. In canvas you can see components where we can filter different components and drag and drop in our canvas. Also elements in canvas can be seen under structure.
 
-   ![](images/task3/23.png " ")
+   ![](images/task3/canvas-overview.png " ")
 
 5. Search for input under components and drag and drop to **Input Text** to canvas
-   ![](images/task3/24.png " ")
+   ![](images/task3/add-input-compnent.png " ")
 
 6. On right hand side under properties, rename **Label hint** to Enter Id and check the required field. Also add class of `oj-sm-padding-5x` which make it look bit nicer.
-   ![](images/task3/25.png " ")
-   ![](images/task3/26.png " ")
+   ![](images/task3/input-label-hint.png " ")
+   ![](images/task3/input-class.png " ")
 
 7. Repeat the same process to add **Button**.
 
 8. Under structure, click on **Flex Container** and then under properties click on **Center** in Justify and again **Center** in Align
-   ![](images/task3/27.png " ")
+   ![](images/task3/entry-page-styling.png " ")
 
 9. Here we are creating variable to store the user input. Click on **Input Text** and then under **Properties** go to **Data** and next to value click on **down arrow** and finally click **Create Variable**.
 
-![](images/task3/28.png " ")
+![](images/task3/id-create-variable.png " ")
 
 10. Give variable ID and then click **Create**
-    ![](images/task3/29.png " ")
+    ![](images/task3/id-name.png " ")
 
 11. Click on Button under structure and then under events in Properties click on **New Event** and on ojAction.
-    ![](images/task3/30.png " ")
+    ![](images/task3/login-button.png " ")
 
 12. This will take you to Action page and create new action for button click event. Rename ID to `LoginButtonActionChain` and then drag and drop **Call REST** to canvas
-    ![](images/task3/31.png " ")
+    ![](images/task3/login-action-chain .png " ")
 
 13. Select **Call Rest** and under **Properties** click on **Select** next to Endpoint
-    ![](images/task3/32.png " ")
+    ![](images/task3/login-action-rest-call.png " ")
 
 14. Select getUser endpoint and click **Select**.
-    ![](images/task3/33.png " ")
+    ![](images/task3/select-get-user-rest.png " ")
 
 15. Under Properties now you should see **Input Parameters** and click on **Assign**
-    ![](images/task3/34.png " ")
+    ![](images/task3/configure-id-input-param.png " ")
 
 16. Drag userId from Sources to id under Target.
-    ![](images/task3/35.png " ")
+    ![](images/task3/map-id.png " ")
 
 17. Now if our REST call is success we want to Navigate to other page, fo that drag and drop **Navigate**. Under **Properties** click **Create** next to Page.
-    ![](images/task3/36.png " ")
+    ![](images/task3/login-action-navigate.png " ")
 
 18. Give name to page and select **Custom**, click **Create**.
-    ![](images/task3/37.png " ")
+    ![](images/task3/create-cardImage-page.png " ")
 
 ### Page 2: main-cardImage
 
 1. In the left navigation pane, find the newly created page and click on "main-cardimage".
-   ![](images/task3/page-2/01.png " ")
+   ![](images/task3/page-2/vbcs-cardImage-page.png " ")
 
 2. In the main-cardpage, go to **types** and click on **+type** and then **From Endpoint**.
-   ![](images/task3/page-2/02.png " ")
+   ![](images/task3/page-2/create-type-from-endpoint.png " ")
 
 3. Select the getUser under services.
-   ![](images/task3/page-2/06.png " ")
+   ![](images/task3/page-2/select-getUser-rest.png " ")
 
 4. Select attributes `first_name,last_name and patient_id` and then click **Finish**.
-   ![](images/task3/page-2/03.png " ")
+   ![](images/task3/page-2/select-id-info.png " ")
 
 5. Then go to **Variables** and click "+Variable", name it **userDetails** and select the type as the one you created in step 4. Then click **Create**. Create another variable **image** of type `Any`.  
-   ![](images/task3/page-2/05.png " ")
+   ![](images/task3/page-2/create-var-from-type.png " ")
 
 6. Choose the option **Required** under the input parameters on the right side of the screen.
-   ![](images/task3/page-2/04.png " ")
+   ![](images/task3/page-2/var-as-required.png " ")
 
 7. Go back to the **main-start** page and open the action chain that will be called on click of the login button. Click on the **navigate to main-cardimage** activity. You should now see under input parameters the newly created input parameter for main-cardimage page i.e. userDetails. Click on **Assign**.
-   ![](images/task3/page-2/08.png " ")
+   ![](images/task3/page-2/login-action-navigate-pass-param.png " ")
 
 8. Assign the userDetails on the right side the following code:
 
 `{ "patient_id": $chain.results.callRestGetPatientId.body.patient_id, "first_name": $chain.results.callRestGetPatientId.body.first_name, "last_name": $chain.results.callRestGetPatientId.body.last_name }`
 
-![](images/task3/page-2/07.png " ")
+![](images/task3/page-2/user-details-var-body.png " ")
 
 Then click Save.
 
@@ -262,42 +262,42 @@ _Note: callRestGetPatientId could be different for you if you changed the rest c
 
 9. Go back to your **main-cardimage** page, drag and drop a form layout to the canvas.
 10. Also add **oj-sm-padding-4x-horizontal** class on the right side properties panel.
-    ![](images/task3/page-2/09.png " ")
+    ![](images/task3/page-2/carImage-page-styling.png " ")
 
 11. Next drag and drop an "Input Text" inside the form layout and on the right properties panel goto data.
 
 12. For the value field under the data tab, hover over the field and you will see an arrow on the far right. Click on that arrow and select "first_name" under the userDetails variable.
-    ![](images/task3/page-2/010.png " ")
+    ![](images/task3/page-2/user-info-input-text.png " ")
 
 13. Repeat step 12 for the "Last Name" field.
-    ![](images/task3/page-2/011.png " ")
+    ![](images/task3/page-2/user-info-input-text.png " ")
 
 14. Drag and drop a camera component under the form layout in the canvas. In the properties panel on the right, deselect video as the app will only accept images. Also align it centrally.
-    ![](images/task3/page-2/012.png " ")
+    ![](images/task3/page-2/camera-component.png " ")
 
 15. Then in the properties panel, go to **events** tab and click on **+New Event** and select **On Selected Files**. This will create new action chain.
-    ![](images/task3/page-2/013.png " ")
+    ![](images/task3/page-2/camera-event.png " ")
 
 16. Drag and drop an **Assign Variables** option to the canvas. Then click **Assign**.
-    ![](images/task3/page-2/014.png " ")
+    ![](images/task3/page-2/camera-action-chain.png " ")
 
 17. From the left assign Files.item[0] to the image variable and make sure to select **expression** and click **Save**.
-    ![](images/task3/page-2/015.png " ")
+    ![](images/task3/page-2/camera-assign-var.png " ")
 
 18. After the assign variable, drag and drop a **fire notification** activity and in the **properties** panel on the right update the details accordingly.  
-    ![](images/task3/page-2/016.png " ")
+    ![](images/task3/page-2/camera-success-notification.png " ")
 
 19. Go back to Page Designer, drag and drop **Button** from components in canvas under Take Photo/Video. Change Label and Align center. Add class `oj-sm-margin-2x-top`
-    ![](images/task3/page-2/017.png " ")
+    ![](images/task3/page-2/upload-button.png " ")
 
 20. Click on **Events**, and then click on **New Event -> ojAction**
-    ![](images/task3/page-2/018.png " ")
+    ![](images/task3/page-2/upload-button-event.png " ")
 
 21. Drag and drop **Call Rest** in canvas and click on **Select** Endpoint in **properties**.
-    ![](images/task3/page-2/019.png " ")
+    ![](images/task3/page-2/upload-rest-action.png " ")
 
 22. Select PUT endpoint for uploading image to Object Storage.
-    ![](images/task3/page-2/020.png " ")
+    ![](images/task3/page-2/upload-rest-select-endpoint.png " ")
 
 23. Enter Bucket Name, Namespace in target and for objectName we will use firstname_lastname.jpeg. Click **Save**
 
@@ -307,14 +307,14 @@ _Note: callRestGetPatientId could be different for you if you changed the rest c
      </copy>
     ```
 
-    ![](images/task3/page-2/021.png " ")
-    ![](images/task3/page-2/026.png " ")
+    ![](images/task3/page-2/upload-rest-assign-var.png " ")
+    ![](images/task3/page-2/upload-rest-assign-body.png " ")
 
 24. Drag and drop **Fire Notification**, enter Summary and change display mode to **Transient** and Notification Type to **confirmation**
-    ![](images/task3/page-2/022.png " ")
+    ![](images/task3/page-2/upload-rest-success-notification.png " ")
 
 25. Drag and drop Call rest after **Fire Notification**. Select analyzeDocument API and then click on body in Parameters.
-    ![](images/task3/page-2/023.png " ")
+    ![](images/task3/page-2/upload-rest-call-ai-service.png " ")
 
 26. Paste the Body as follow, and replace fields like namespace and bucketname with yours. For objectName copy the syntax we used above for uploading image to Object Storage.
 
@@ -340,7 +340,7 @@ _Note: Replace namespaceName and bucketName in above payload_
 
 27. Drag and drop **Call Function**. Here we will write our own javascript function to parse the output we get after analyzing image.
 
-    ![](images/task3/page-2/028.png " ")
+    ![](images/task3/page-2/upload-call-function.png " ")
 
 28. Click on **JavaScript** Tab and paste the following function inside PageModule class.
 
@@ -378,75 +378,75 @@ _Note: Replace namespaceName and bucketName in above payload_
     </copy>
     ```
 
-    ![](images/task3/page-2/029.png " ")
+    ![](images/task3/page-2/upload-js.png " ")
 
 29. Go back to **Actions** page and then click on **Call Function**, under properties select the Function Name that we just added.
 
-    ![](images/task3/page-2/030.png " ")
+    ![](images/task3/page-2/upload-select-js.png " ")
 
 30. We need to pass the output from endpoint to function, click on Assign next to Input Parameters and expand results, look for Lines array and map it to arrOfLines in target
 
-    ![](images/task3/page-2/031.png " ")
+    ![](images/task3/page-2/upload-assign-js-body.png " ")
 
 31. Add another Rest Call and select patient_insurance endpoint to update patient insurance details in DB.
 
-    ![](images/task3/page-2/032.png " ")
+    ![](images/task3/page-2/upload-patient-insurance-rest.png " ")
 
 32. Replace all the fields in body. Member id and Group Number we will get from our JS function and patient id is already there in variable. Construct the URL for image URL
-    ![](images/task3/page-2/033.png " ")
+    ![](images/task3/page-2/upload-patient-insurance-rest-body.png " ")
 
 33. Add **Navigate** at the end in Success fork, and select the **main-success** page.
-    ![](images/task3/page-2/034.png " ")
+    ![](images/task3/page-2/upload-navigate-to-success.png " ")
 
 ### Page 3: main-success
 
 1. Click on Flex Container under Structure and on the right properties panel, select the following:
-   ![](images/task3/53.png " ")
+   ![](images/task3/success-page-styling.png " ")
 
 2. Drag and drop a icon component onto the canvas and click on the icon option in the properties panel.
-   ![](images/task3/54.png " ")
+   ![](images/task3/success-page-icon.png " ")
 
 3. Search for success and select the **Success S** option and then click on **Select**.
-   ![](images/task3/55.png " ")
+   ![](images/task3/select-success-icon.png " ")
 
 4. Add the **oj-icon-color-success** class to the icon.
-   ![](images/task3/56.png " ")
+   ![](images/task3/success-icon-style.png " ")
 
 5. Go to the **All tab** for the icon properties and then search for style. Then add **font-size:100px;**
-   ![](images/task3/57.png " ")
+   ![](images/task3/success-icon-size.png " ")
 
 6. Drag and drop a **Text** component right under the icon component.
 7. Change the value to _Success! You can now return to the Chatbot_
-   ![](images/task3/58.png " ")
+   ![](images/task3/success-text.png " ")
 
 ## Task 4: Publish Application and test
 
 ### Publish the Application
 
 1. Click on the app name, click on **SETTINGS** and then **PWA**. Enable the Progressive Web App option so that VBCS can generate the barcode for you to scan and test.
-   ![](images/task4/01.png " ")
+   ![](images/task4/enable-pwa.png " ")
 
 2. Then click the right hand side top corner menu and click **STAGE**. Then click **STAGE** again.
-   ![](images/task4/02.png " ")
-   ![](images/task4/03.png " ")
+   ![](images/task4/stage-app.png " ")
+   ![](images/task4/stage-app-button.png " ")
 
 3. Then click the right hand side top corner menu and click **PUBLISH**. Then click **PUBLISH** again.
-   ![](images/task4/04.png " ")
-   ![](images/task4/05.png " ")
+   ![](images/task4/publish-app.png " ")
+   ![](images/task4/publish-app-button.png " ")
 
 ### Test the application
 
 1. Go to the visual builder top level page where you can see all the applications. Click on **LIVE** and then the app name. This will open another window.
 
-   ![](images/task4/06.png " ")
+   ![](images/task4/live-app-url.png " ")
 
 2. Here on the right side of the screen you can see the barcode to scan to test this on your own mobile device.
 
-   ![](images/task4/07.png " ")
+   ![](images/task4/app-qr-code.png " ")
 
 3. Enter the ID, and then click on **LOGIN**.
 
-   ![](images/task4/08.png " ")
+   ![](images/task4/test-login-page.png " ")
 
 4. Verify the details of the user, click on **Take Photo** and then capture an image of your health insurance card. Now you can either take a picture of your own health insurance card or take a picture of the sample below.
 
@@ -454,15 +454,15 @@ Once that is done, you should see a notification saying that photo was taken suc
 
 ![](images/task4/HealthCardSample.png " ")
 
-![](images/task4/09.png " ")
+![](images/task4/take-photo-test.png " ")
 
 5. Next click on the upload button and wait for the notifications to pop up, this might take some time depending on network latency as the image is being uploaded to the bucket.
 
-   ![](images/task4/010.png " ")
+   ![](images/task4/upload-photo-test.png " ")
 
 6. If everything goes smooth, it should navigate you to the success page.
 
-   ![](images/task4/011.png " ")
+   ![](images/task4/success-page-test.png " ")
 
 ## Homework
 
@@ -499,7 +499,6 @@ Step-by-Step Instructions to Complete the Homework Assignment
 6. Click play and test the app. If the patient visits table in ATP contains your email address then this app will pull data and show it on the page.
 
    ![](images/homework/app-test.png " ")
-
 
 ## Troubleshoot Tips
 
