@@ -65,7 +65,7 @@ Before you start using OCI Vision, your tenancy administrator should set up the 
     </copy>
     ```
 
-    ![](images/policy4.png " ")
+    ![Limit access with the following policy statement](images/vision-access-policy.png " ")
 
 
 ## Task 1: Understand the data requirements for OCI AI Vision service
@@ -86,15 +86,15 @@ The service offers sync and async APIs to analyze images, with data requirements
 
 a. First, From the OCI Services menu, click Object Storage.
 
-![](images/cloud-storage-bucket.png " ")
+![Click "Object Storage" from OCI Services menu](images/cloud-storage-bucket.png " ")
 
 b. Then, Select Compartment from the left dropdown menu. Choose the compartment matching your name or company name.
 
-![](images/compartment.png " ")
+![Choose the compartment matching your name or company name](images/compartment.png " ")
 
 c. Next click Create Bucket
 
-![](images/bucket.png " ")
+![Click "Create Bucket"](images/bucket.png " ")
 
 d. Next, fill out the dialog box:
 
@@ -103,18 +103,18 @@ d. Next, fill out the dialog box:
 
 e. Then click Create
 
-![](images/createBucket.png " ")
+![Click "Create"](images/create-bucket.png " ")
 
 2. Upload image files into Storage Bucket
 
 a. Switch to OCI Window and click the Bucket Name.
 b. Bucket detail window should be visible. Click Upload
 
-![](images/upload.png " ")
+![Click "Upload"](images/upload.png " ")
 
 c. Click on Upload and then browse to file which you desire to upload.
 
-![](images/uploaded.png " ")
+![Click on "Upload" and then browse to file which you desire to upload](images/uploaded.png " ")
 
 More details on Object storage can be found on this page. [Object Storage Upload Page](https://oracle-livelabs.github.io/oci-core/object-storage/workshops/freetier/index.html?lab=object-storage) to see how to upload.
 
@@ -122,23 +122,23 @@ More details on Object storage can be found on this page. [Object Storage Upload
 
 1. Navigate to the Vision Page of OCI Console
 
-![](images/navigate-to-ai-vision-menu.png " ")
+![Navigate to the Vision Page of OCI Console](images/navigate-to-ai-vision-menu.png " ")
 
 2. Use Document AI features
 
 a. On the Vision page, select “Document AI” on the left navigation menu and provide a document or image from OCI object storage. You can also upload from local storage. In order to upload image from Object Storage Bucket, you will need image's URL Path.
 
-![](images/template.png " ")
+![Select "Document AI" on left navigation menu and submit a document or image URL path](images/template.png " ")
 
 b. Image URL path can be found in the Object Storage Bucket where your image resides. Navigate to the bucket to locate object details that has the image URL path, as shown below. 
 
-![](images/obj-details.png " ")
-![](images/path.png " ")
+![Click "View Object Details"](images/obj-details.png " ")
+![Copy the URL Path](images/path.png " ")
 
 
 c.  This invokes analyzeDocument API after the image is provided. Raw text extracted by our pre-trained multi-tenant model is displayed on the right.
 
-![](images/document-ai.png " ")
+![Enter URL Path in "Enter Image URL" field on Document AI page](images/document-ai.png " ")
 
 
 | Feature | Description | Details on Console |
