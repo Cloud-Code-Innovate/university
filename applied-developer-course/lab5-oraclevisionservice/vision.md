@@ -23,7 +23,7 @@ In this lab, you will:
 
 ### Pre-requisites 
 
--	A free tier or paid tenancy in OCI (Oracle Cloud Infrastructure)
+-	A paid tenancy in OCI (Oracle Cloud Infrastructure)
 -	Familiarity with OCI Object Storage is desirable, but not required
 
 
@@ -36,14 +36,14 @@ Before you start using OCI Vision, your tenancy administrator should set up the 
     Log into OCI Cloud Console. Using the Burger Menu on the top left corner, navigate to Identity & Security and click it, and then select Policies item under Identity.
 
 
-    ![Navigate to Policies](images/navigate-to-policies.png " ")
+    ![Navigate to "Policies"](images/navigate-to-policies.png " ")
 
 
 2. Create Policy
 
    Click Create Policy 
 
-   ![Create a Policy](images/create-policy.png " ")
+   ![Create a policy](images/create-policy.png " ")
 
 3. Create a new policy with the following statements:
 
@@ -86,11 +86,11 @@ The service offers sync and async APIs to analyze images, with data requirements
 
 a. First, From the OCI Services menu, click Object Storage.
 
-![Click "Object Storage" from OCI Services menu](images/cloud-storage-bucket.png " ")
+![Click "Storage" from OCI Services menu and select "Buckets" under Object Storage heading](images/cloud-storage-bucket.png " ")
 
 b. Then, Select Compartment from the left dropdown menu. Choose the compartment matching your name or company name.
 
-![Choose the compartment matching your name or company name](images/compartment.png " ")
+![Choose the appropriate compartment in which you want to create the bucket](images/compartment.png " ")
 
 c. Next click Create Bucket
 
@@ -103,7 +103,7 @@ d. Next, fill out the dialog box:
 
 e. Then click Create
 
-![Click "Create"](images/create-bucket.png " ")
+![Add a Bucket Name, choose Standard Tier, and Click "Create" button](images/create-bucket.png " ")
 
 2. Upload image files into Storage Bucket
 
@@ -114,7 +114,7 @@ b. Bucket detail window should be visible. Click Upload
 
 c. Click on Upload and then browse to file which you desire to upload.
 
-![Click on "Upload" and then browse to file which you desire to upload](images/uploaded.png " ")
+![Click on "Upload" and then browse to file which you desire to upload](images/select-files.png " ")
 
 More details on Object storage can be found on this page. [Object Storage Upload Page](https://oracle-livelabs.github.io/oci-core/object-storage/workshops/freetier/index.html?lab=object-storage) to see how to upload.
 
@@ -233,7 +233,7 @@ In the "review" step, you can verify that all of your information is correct and
 
 ![Verify information and submit when ready to run model](images/review.png " ")
 
-Congratulations on completing this lab!
+Congratulations on completing this lab! You may now **proceed to the next lab**.
 
 
-## Homework: ???
+## Homework: N/A
