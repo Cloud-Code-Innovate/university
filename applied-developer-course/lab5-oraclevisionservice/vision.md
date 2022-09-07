@@ -155,7 +155,7 @@ c.  This invokes analyzeDocument API after the image is provided. Raw text extra
 a. On the Vision page, select “Image Classification” or "Object Detection" on the left navigation menu and provide an image from local storage or OCI object storage. This invokes analyzeImage API after the image is provided.
 
 
-![](images/img-classification.png " ")
+![Provide an image from local storage or OCI Object Storage](images/img-classification.png " ")
 
 
 b. Features you can test out:
@@ -165,7 +165,7 @@ b. Features you can test out:
 | Image classification | Categorizes object(s) within an image | Select "Image Classification." Labels and confidence scores will appear under the Results pane. [Reference](images/img-detection.png)|
 | Object detection | Locates and identifies objects within an image | Select "Object Detection." Objects, confidence score, and highlighted bounding box will all appear under the Results pane. Clicking on one of the labels on the results pane will also highlight where on the image that object was detected.|
 
-With this information, you can now succesfully leverage OCI Vision service through the OCI console.
+With this information, you can now successfully leverage OCI Vision service through the OCI console.
 
 Next, we will show you how to create a Custom Vision model through the console. 
 
@@ -178,11 +178,11 @@ A Project is a way to organize multiple models in the same workspace. It is the 
 
 1. Log into OCI Cloud Console. Using the Burger Menu on the top left corner, navigate to Analytics and AI menu and click it, and then select Vision Service item under AI services. Clicking the Vision Service Option will navigate one to the Vision Service Console. Once here, select Projects under "Custom Models" header on the left hand side of the console.
 
-![](images/project.png " ")
+![Click Vision Service from OCI console navigation menu. Then, select Projects under "Custom Models" header on the left hand side of the console](images/project.png " ")
 
 2. The Create Project button navigates User to a form where they can specify the compartment in which to create a Vision Project. The project we create here is named "CareClinicsDemo".
 
-![](images/create-project.png " ")
+![Name and provide a description for the project](images/create-project.png " ")
 
 3. Once the details are entered click the Create Button. If the project is successfully created it will show up in projects pane.
 
@@ -193,45 +193,45 @@ A Project is a way to organize multiple models in the same workspace. It is the 
 
 2. You will need to select Create Model within your project. 
 
-![](images/create-model.png " ")
+![Click "Create Model" button](images/create-model.png " ")
 
 3. AI Vision Service supports training of an on-demand custom model for Object Detection, Image Classification, and Document Image Classification features. You can select one of these three options in the drop down.
 
- ![](images/select-model.png " ")
+ ![Choose a training model from the dropdown list](images/select-model.png " ")
 
 
 ## Task 6: Select Training Data 
 
  1. To train a custom model, you will need training data. There are two main options depending on if you already have an annotated dataset, or only have raw (unlabeled) images.
 
- ![](images/model-type.png " ")
+ ![Choose a training model type from list](images/model-type.png " ")
 
 
 2. Create a New dataset: If you do not have any annotated images (you only have raw images you'd like to train your model on), select "Create a New Dataset".
 
-![](images/dataset.png " ")
+![Create a new dataset](images/create-new-dataset.png " ")
 
 
 This will drive you to OCI Data Labeling service, where you can easily add labels or draw bounding boxes over your image content. To learn more about how to annotate images using OCI Data Labeling service, you can review documentation here [Adding and Editing Labels](https://docs.oracle.com/en-us/iaas/data-labeling/data-labeling/using/labels.htm).
 
-![](images/dls.png " ")
+![View Data Labeling Page for more information](images/data-labeling-page.png " ")
 
 Choose existing dataset: If you have an existing annotated dataset, you can select it by clicking "Choose Existing Dataset." If you've previously annotated images using OCI Data Labeling service, select that button and select the dataset file of your choice. If you have annotated your images using some 3rd party tool, you can upload that dataset file to object storage and select via the "object storage" button.
 
-![](images/training-data.png " ")
+![Choose existing dataset](images/training-data.png " ")
 
 ## Task 7: Train your Custom Model
 
 1. In the "train model" step, you will name your model, add a description of it, and optionally, specify a training duration.
 
-![](images/train-model1.png " ")
+![Name your training model, add a description, and specify a duration if applicable](images/train-custom-model.png " ")
 
 
 ## Task 8: Review and Submit
 
 In the "review" step, you can verify that all of your information is correct and go back if you want to make adjustments (on training time, for example). When you want to start training, click "submit" and this will kick of the process. You can then check on the status of your model in the project where you created it.
 
-![](images/review.png " ")
+![Verify information and submit when ready to run model](images/review.png " ")
 
 Congratulations on completing this lab!
 
