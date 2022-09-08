@@ -150,37 +150,40 @@ In this task, you will navigate to the Autonomous Data Warehouse (ADW) cloud con
 
 1. Navigate to the **Analytics Home Page** and select **Create**
 
-    ![OAC Home](./images/Task-2/1-analytics-home.png)
+    ![OAC Home](./images/Task-3/1-analytics-home.png)
 
-2. We will be creating a new **Connection** 
+2. We will be creating a new data source connection: **Create** > **Connection** 
 
-    ![Create Connection](./images/Task-2/2-create-connection.png)
+    ![Create Connection](./images/Task-3/2-create-connection.png)
 
-3. There are many connection types available to OAC, but today we will connect to the **Oracle Autonomous Data Warehouse**.
+3. There are many connection types available to OAC, from , but today we will connect to the **Oracle Autonomous Data Warehouse**.
 
-    ![Select ADW](./images/Task-2/3-select-adw.png)
+    ![Select ADW](./images/Task-3/3-select-adw.png)
 
-4. Enter the database details as below
+4. Enter the database details as below and select **Save**
 
-    ![Select ADW](./images/Task-2/4-db-detail.png)
+    ![Select ADW](./images/Task-3/4-db-detail.png)
 
-    - **Connection Name**: `Hospital Database`
-        ```
-        <copy>Hospital Database</copy>
-        ```
+    - **Connection Name**: *`Hospital Database`*
 
     - **Description**: &lt;Optional&gt;
        
-    - **Client Credentials**: Click `Select` and Choose from File your Database Wallet, as gathered in Step 1 of this Task.
-    - **Feature Set**: Enterprise Analytics (important)
+    - **Client Credentials**: 
+        - Click **Select** and browse your file system for the ADW Wallet (name format is '**Wallet_dbname.zip**'. This is the wallet file that you downloaded in the previous task).
     
-    - **Capacity**: 1 - Non Production
+    - **Username**: *admin*
     
-    - **License Type**: License Included "Subscribe to a new Analytics Cloud software > license and the Analytics Cloud." (You will use this service as part of the free Oracle Cloud trial that you requested for this workshop).
+    - **Password**: Enter the *password* you created to download your ADW Wallet file
+    
+    - **Service Name**: *dbname_high*
 
-    - **Edition**: Enterprise Edition "Deploy an instance with enterprise modeling, reporting, and data visualization"
+5. For future reference to the Connections list, navigate through the **hamburger menu** and select **Data**. From the data page, select **Connections**
 
-5. 
+    ![Menu > Data](images/Task-3/5-1menu-data.png)
+    
+    ![Connections](images/Task-3/5-2connections.png)
+
+    See that the **Hospital Database** is listed under Connections.
 
 ## Task 4: Create Data Mapping Between ADW Tables in OAC
 
